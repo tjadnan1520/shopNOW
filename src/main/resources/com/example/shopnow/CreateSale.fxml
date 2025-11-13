@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane style="-fx-background-color: #8e8e8e;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shopnow.controller.CreateSalesController">
+    <children>
+        <VBox AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" prefWidth="1000.0" spacing="20" style="-fx-background-color: white; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 4);">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+            <children>
+                <Label alignment="CENTER" text=" Create Sale">
+                    <font>
+                        <Font name="Arial Black" size="32.0" />
+                    </font>
+                </Label>
+                <HBox prefWidth="699.0" spacing="20">
+                    <children>
+                        <VBox prefHeight="30.0" prefWidth="280" spacing="10">
+                            <Label text="Select Product:" />
+                            <ComboBox fx:id="productComboBox" prefWidth="250" promptText="Search Product..." />
+                            <Label text="Date (d-m-y):" />
+                            <TextField fx:id="date" prefWidth="250" promptText="d-m-y" />
+                        </VBox>
+                        <VBox prefWidth="170" spacing="10">
+                            <Label text="Quantity:" />
+                            <TextField fx:id="quantityField" prefWidth="150" promptText="Enter Quantity" />
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" prefWidth="160">
+                            <Button fx:id="addToCartButton" onAction="#onAddToCart" prefHeight="40" prefWidth="150" style="-fx-background-color: #8e8e8e; -fx-text-fill: black; -fx-font-weight: bold;" text=" Add to Cart" />
+                        </VBox>
+                    </children>
+                </HBox>
+                <TableView fx:id="cartTable" prefHeight="179.0" prefWidth="939.0">
+                    <columns>
+                        <TableColumn fx:id="productNameCol" prefWidth="411.0" text="Product" />
+                        <TableColumn fx:id="quantityCol" prefWidth="259.0" text="Quantity" />
+                        <TableColumn fx:id="priceCol" prefWidth="257.0" text="Price" />
+                        <TableColumn fx:id="subtotalCol" prefWidth="212.0" text="Subtotal" />
+                    </columns>
+                </TableView>
+                <HBox alignment="CENTER_LEFT" spacing="15">
+                    <children>
+                        <VBox spacing="10">
+                            <Label text="Customer Phone:" />
+                            <TextField fx:id="phoneField" prefHeight="11.0" prefWidth="250" promptText="Enter Phone Number" />
+                        </VBox>
+                        <Button fx:id="searchButton" onAction="#onSearchCustomer" style="-fx-background-color: #8e8e8e; -fx-text-fill: black;" text=" Search" />
+                        <Button fx:id="addCustomerButton" onAction="#onAddCustomer" style="-fx-background-color: #1cc88a; -fx-text-fill: white;" text="➕ Add Customer" visible="false" />
+                    </children>
+                </HBox>
+                <VBox spacing="10">
+                    <Label style="-fx-font-size: 16; -fx-font-weight: bold;" text="Customer Details" />
+                    <HBox spacing="40">
+                        <VBox spacing="5">
+                            <Label text="Name:" />
+                            <Label fx:id="customerName" style="-fx-font-size: 14;" text="-" />
+                        </VBox>
+                        <VBox spacing="5">
+                            <Label text="Email:" />
+                            <Label fx:id="customerEmail" style="-fx-font-size: 14;" text="-" />
+                        </VBox>
+                    </HBox>
+                </VBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="4.0" prefWidth="939.0" spacing="10">
+                    <Label style="-fx-font-size: 16;" text=" Total Bill:" />
+                    <Label fx:id="totalLabel" style="-fx-font-weight: bold; -fx-font-size: 16;" text="0.0" />
+                </HBox>
+                <!-- দুটি বাটন একসাথে রাখা হলো -->
+                <HBox alignment="CENTER" prefHeight="20.0" prefWidth="939.0" spacing="20">
+                    <Button fx:id="sellButton" onAction="#onConfirmSale" prefHeight="40" prefWidth="200" style="-fx-background-color: #8e8e8e; -fx-text-fill: black; -fx-font-weight: bold;" text=" Confirm Sale" />
+                    <Button fx:id="saveDraftButton" onAction="#onSaveDraft" prefHeight="40" prefWidth="200" style="-fx-background-color: #8e8e8e; -fx-text-fill: black; -fx-font-weight: bold;" text=" Save Draft" />
+                    <Button fx:id="back" mnemonicParsing="false" onAction="#onClickBack" prefHeight="23.0" prefWidth="43.0" style="-fx-background-color: #8e8e8e; -fx-text-fill: black; -fx-font-weight: bold;" text="Back" />
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

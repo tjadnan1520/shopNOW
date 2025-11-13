@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="900.0" prefWidth="1600.0" spacing="25" style="-fx-background-color: #8e8e8e8e;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shopnow.controller.ReportOptionController">
+
+    <padding>
+        <Insets bottom="30" left="30" right="30" top="30" />
+    </padding>
+
+    <!-- Main White Card -->
+    <VBox alignment="CENTER" prefHeight="389.0" prefWidth="540.0" spacing="20" style="-fx-padding: 40 30 40 30; -fx-background-color: white; -fx-background-radius: 15;                  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 4);">
+
+        <!-- Title -->
+        <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #333;" text=" Choose Report Type" />
+
+        <!-- Daily Report Button -->
+        <Button onAction="#onDailyReportClick" prefHeight="60" prefWidth="300" style="-fx-background-color: #8e8e8e8e; -fx-text-fill: black; -fx-font-family: Arial Black; -fx-font-size: 16px; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 6, 0, 0, 3);" text=" Daily Report" />
+
+        <!-- Monthly Report Button -->
+        <Button onAction="#onMonthlyReportClick" prefHeight="60" prefWidth="300" style="-fx-background-color: #8e8e8e8e; -fx-font-family: Arial Black; -fx-text-fill: black; -fx-font-size: 16px; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 6, 0, 0, 3);" text=" Monthly Report" />
+
+        <!-- Back Button -->
+        <Button onAction="#onBackClick" prefHeight="50" prefWidth="200" style="-fx-background-color: #8e8e8e8e; -fx-font-family: Arial Black; -fx-text-fill: black; -fx-font-size: 14px; -fx-background-radius: 12;" text=" Back" />
+
+    </VBox>
+
+</VBox>

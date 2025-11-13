@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #8e8e8e;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shopnow.controller.AddProductController">
+
+    <children>
+        <VBox layoutX="100" layoutY="100" prefHeight="350.0" prefWidth="600.0" spacing="20" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 40;">
+            <children>
+
+                <Label style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: black;" text=" Add Product" />
+
+                <GridPane hgap="20" prefHeight="600" prefWidth="1100" vgap="20">
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="200" />
+                        <ColumnConstraints minWidth="700" />
+                    </columnConstraints>
+
+                    <children>
+                        <Label text="Product ID:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                        <TextField fx:id="productId" promptText="Enter product ID" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <Label text="Product Name:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                        <TextField fx:id="productName" promptText="Enter product name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Label text="Category:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                        <TextField fx:id="category" promptText="Enter category" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                        <Label text="Buy Price ($):" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                        <TextField fx:id="buyPrice" promptText="Enter buy price" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                        <Label text="Sell Price ($):" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                        <TextField fx:id="sellPrice" promptText="Enter sell price" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                        <Label text="Quantity:" GridPane.columnIndex="0" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                        <TextField fx:id="quantity" promptText="Enter quantity" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                        <Label text="Date:" GridPane.columnIndex="0" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                        <TextField fx:id="date" promptText="Enter adding date (DD-MM-YYYY)" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                        <Label text="Expire Date:" GridPane.columnIndex="0" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                        <TextField fx:id="expireDate" promptText="Enter expire date (DD-MM-YYYY)" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                    </children>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane>
+
+                <HBox spacing="30" style="-fx-alignment: center;">
+                    <Button fx:id="add" onAction="#onClickAdd" prefHeight="50" prefWidth="140" style="-fx-background-color: #8e8e8e; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 20;" text="Add" />
+                    <Button fx:id="back" onAction="#onClickBack" prefHeight="50" prefWidth="140" style="-fx-background-color: #8e8e8e; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 20;" text="Back" />
+                </HBox>
+
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

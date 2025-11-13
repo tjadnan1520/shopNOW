@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shopnow.controller.HomeController">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-background-color: #8e8e8e8e; -fx-background-radius: 0 0 20 20;">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+            <children>
+                <Label style="-fx-text-fill: black; -fx-font-size: 26px; -fx-font-weight: bold;" text="ShopNow Home " />
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <padding>
+                <Insets bottom="50" left="50" right="50" top="50" />
+            </padding>
+
+            <GridPane alignment="CENTER" hgap="30" vgap="30">
+
+                <Button fx:id="addProductButton" onAction="#onAddProductClick" prefHeight="80" prefWidth="220" style="-fx-font-size: 18px; -fx-background-color: #8e8e8e8e; -fx-font-family: Arial Black; -fx-text-fill: black; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4);" text=" Add Product" />
+
+                <Button onAction="#onProductListClick" prefHeight="80" prefWidth="220" style="-fx-font-size: 18px; -fx-background-color: #8e8e8e8e; -fx-font-family: Arial Black; -fx-text-fill: black; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4);" text=" Product List" GridPane.columnIndex="1" />
+
+                <Button onAction="#onCustomerListClick" prefHeight="80" prefWidth="220" style="-fx-font-size: 18px; -fx-background-color: #8e8e8e8e; -fx-font-family: Arial Black; -fx-text-fill: black; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4);" text=" Customer List" GridPane.rowIndex="1" />
+
+                <Button onAction="#onOrderHistoryClick" prefHeight="80" prefWidth="220" style="-fx-font-size: 18px; -fx-background-color: #8e8e8e8e; -fx-font-family: Arial Black; -fx-text-fill: black; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4);" text=" Order History" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Button onAction="#onCreateSalesClick" prefHeight="72.0" prefWidth="220.0" style="-fx-font-size: 18px; -fx-font-family: Arial Black; -fx-background-color: #8e8e8e8e; -fx-text-fill: black; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4);" text=" Create Sales" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+
+                <!-- 🆕 Show Reports Button -->
+                <Button onAction="#onShowReportsClick" prefHeight="81.0" prefWidth="219.0" style="-fx-font-size: 18px; -fx-font-family: Arial Black; -fx-background-color: #8e8e8e8e; -fx-text-fill: black; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4);" text=" Show Reports" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+
+                <columnConstraints>
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+               <ColumnConstraints />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
+            </GridPane>
+
+            <!-- View Stock Button -->
+            <Button onAction="#onViewStockClick" prefHeight="80" prefWidth="470" style="-fx-font-size: 18px; -fx-font-family: Arial Black; -fx-background-color: #8e8e8e8e; -fx-text-fill: black; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4);" text=" View Stock">
+            <font>
+               <Font name="Arial Black" size="12.0" />
+            </font></Button>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER">
+            <padding>
+                <Insets bottom="20" top="10" />
+            </padding>
+            <Button fx:id="backButton" onAction="#onBack" prefHeight="40" prefWidth="120" style="-fx-background-color: #8e8e8e8e; -fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 10;" text=" Back" />
+        </HBox>
+    </bottom>
+
+</BorderPane>

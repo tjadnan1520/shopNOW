@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.geometry.*?>
+        <?import javafx.scene.control.*?>
+        <?import javafx.scene.effect.*?>
+        <?import javafx.scene.layout.*?>
+        <?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shopnow.controller.ProductListController">
+
+<children>
+
+    <VBox layoutX="30.0" layoutY="100.0" prefHeight="709.0" prefWidth="1357.0" spacing="10.0">
+        <padding>
+            <Insets bottom="15" left="15" right="15" top="15" />
+        </padding>
+        <children>
+            <TableView fx:id="productTable" prefHeight="391.0" prefWidth="1327.0">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="100.0" text="Product ID" />
+                    <TableColumn fx:id="nameColumn" prefWidth="200.0" text="Product Name" />
+                    <TableColumn fx:id="categoryColumn" prefWidth="160.0" text="Category" />
+                    <TableColumn fx:id="buyPriceColumn" prefWidth="150.0" text="Buy Price" />
+                    <TableColumn fx:id="sellPriceColumn" prefWidth="189.0" text="Sell Price" />
+                    <TableColumn fx:id="quantityColumn" prefWidth="160.0" text="Quantity" />
+                    <TableColumn fx:id="dateColumn" prefWidth="182.0" text="Date" />
+                    <TableColumn fx:id="expireDateColumn" prefWidth="184.0" text="Expire Date" />
+                </columns>
+                <effect>
+                    <DropShadow color="#aaaaaa" offsetY="5" radius="10" />
+                </effect>
+                <style>
+                    -fx-background-radius: 10;
+                    -fx-border-radius: 10;
+                    -fx-border-color: #cccccc;
+                    -fx-font-size: 14px;
+                </style>
+            </TableView>
+        </children>
+    </VBox>
+
+    <Button fx:id="back" layoutX="1273.0" layoutY="515.0" onAction="#onClickBack" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #8e8e8e8e; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 20;" text="Back">
+        <font>
+            <Font name="Arial Black" size="13.0" />
+        </font></Button>
+
+    <HBox prefHeight="100.0" prefWidth="1453.0" style="-fx-background-color: #8e8e8e8e; -fx-background-radius: 0 0 20 20;">
+        <children>
+            <Label prefHeight="100.0" prefWidth="400.0" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 26px;" text="   Product List" textAlignment="JUSTIFY" />
+        </children>
+    </HBox>
+</children>
+</AnchorPane>
+
+
