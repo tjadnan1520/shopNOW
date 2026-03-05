@@ -7,13 +7,7 @@ This project demonstrates fundamental **web development concepts** and a basic *
 
 ---
 
-## 🚀 Live Demo
 
-If deployed with GitHub Pages:
-
-https://tjadnan1520.github.io/shopNOW
-
----
 
 ## 📌 Features
 
